@@ -1,0 +1,155 @@
+/* Reset CSS Basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+/* Global styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f; /* Couleur sombre pour l'ambiance COD */
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    color: #00ff00; /* Vert fluo pour un effet militaire */
+    text-shadow: 0 0 10px #00ff00;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #00ff00; /* Même couleur que le titre */
+    margin-top: 20px;
+}
+
+p {
+    color: #d4d4d4;
+}
+
+/* Image grid */
+.image-grid {
+    margin-top: 20px;
+}
+
+
+/* Rendre l'image responsive */
+.responsive-img {
+    width: 100%;      /* L'image occupe toute la largeur disponible */
+    max-width: 600px; /* Limite la largeur maximale de l'image (modifiable selon la taille souhaitée) */
+    height: auto;     /* Conserve le ratio d'aspect de l'image */
+    margin: 20px 0;   /* Marge pour espacer l'image du texte */
+    display: block;   /* Bloque l'affichage pour centrer l'image si besoin */
+    margin-left: auto; /* Centrer l'image horizontalement */
+    margin-right: auto; /* Centrer l'image horizontalement */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les images */
+    margin-bottom: 20px;
+}
+
+.row img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px; /* Coins arrondis pour un effet moderne */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Animation lors du survol */
+    border: 3px solid transparent; /* Par défaut sans contour */
+}
+
+.row img:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    box-shadow: 0 0 15px #00ff00; /* Effet lumineux */
+}
+
+.row img.selected {
+    border: 3px solid #00ff00; /* Contour vert fluo quand l'image est sélectionnée */
+    transform: scale(1.2); /* Agrandir l'image sélectionnée */
+    box-shadow: 0 0 20px #00ff00;
+    outline: none; /* Supprime le contour bleu persistant */
+}
+
+
+/* Results section */
+.results {
+    background: #1a1a1a; /* Fond sombre pour la section résultats */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px #333;
+}
+
+.results p {
+    font-size: 1.2em;
+}
+
+.results span {
+    color: #00ff00;
+    font-weight: bold;
+}
+.explain{
+    margin-bottom:0px;
+    margin-bottom: 60px;
+}
+/* Footer */
+.footer {
+    background-color: #333;  /* Couleur de fond sombre pour le footer */
+    color: white;  /* Texte en blanc */
+    text-align: center;  /* Centrer le texte */
+    padding: 20px 0;  /* Espacement vertical */
+    font-family: 'Arial', sans-serif;  /* Police claire et moderne */
+    font-size: 14px;  /* Taille du texte */
+    position: relative;  /* Positionner le footer de façon relative pour le placer au bas */
+    bottom: 0;
+    width: 100%;  /* Largeur complète */
+    margin-top: 30px;  /* Petite marge avant le footer */
+}
+
+.footer p {
+    margin: 0;  /* Supprime les marges par défaut */
+    color: #ccc;  /* Couleur de texte un peu plus claire */
+}
+
+.footer a {
+    color:#00ff00 ;  /* Couleur de lien or/orangé */
+    text-decoration: none;  /* Supprimer la sous-ligne */
+    font-weight: bold;  /* Met en gras le texte du lien */
+}
+
+.footer a:hover {
+    text-decoration: none;  /* Souligner au survol */
+    color: #ff9900;  /* Changer la couleur au survol */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .row img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .results p {
+        font-size: 1em;
+    }
+}
